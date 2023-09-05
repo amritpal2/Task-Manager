@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-image: url(https://th.bing.com/th/id/OIP.Uiib9gUhZBzLtk5Ir66iowHaEK?w=322&h=181&c=7&r=0&o=5&pid=1.7);
+}
+
+header {
+    background-color: #640f0f80;
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+}
+
+/* filters */
+button,
+#search {
+    border-radius: 16px;
+    border: 1px solid gray;
+    padding-block: 2px 2px;
+    margin-block: 2px 2px;
+
+}
+
+#search {
+    padding-left: 8px;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+#filters {
+    display: inline-block;
+}
+
+.filter-items {
+    display: inline;
+    width: auto;
+}
+
+.categorySearchButton {
+    position: relative;
+}
+
+.categorySearchButton:hover .category_options {
+    display: block;
+}
+
+.categorySearchButton:hover #arrow_down {
+    display: none;
+}
+
+.categorySearchButton:hover #arrow_up {
+    display: inline-block;
+}
+
+.category_arrow {
+    font-size: x-large;
+}
+
+#arrow_down {
+    display: ;
+}
+
+#arrow_up {
+    display: none;
+}
+
+
+.category_options {
+    display: none;
+    text-align: start;
+    z-index: 1;
+    position: absolute;
+    margin-top: 3px;
+    border-radius: 4px;
+    background-color: rgb(230, 229, 229);
+    padding: 4px;
+}
+
+.opts,
+.st_opt {
+    padding-top: 4px;
+    margin: 0%;
+}
+
+
+.opts:hover {
+    opacity: 0.5;
+}
+
+
+/* tasks */
+.edit-form,
+.add-task {
+    border: 1px solid gray;
+    border-radius: 8px;
+    position: fixed;
+    display: block;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 1;
+    background-color: rgba(211, 211, 211, 0.623);
+    box-shadow: 5px 5px 5px gray;
+}
+
+.add-task>div,
+.edit-form>div {
+    font-size: 20px;
+    text-align: left;
+    right: 7%;
+    top: 5%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.add-task>input,
+.edit-form>input,
+label {
+    margin: 10px 10px 0px 0px;
+    display: block;
+}
+
+.task-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #beeefd;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.delete-btn {
+    padding: 2px 8px 2px 8px;
+}
+
+#del-btn-svg {
+    margin-block: -2px -4px;
+    color: rgb(71, 69, 69);
+}
+
+/* cube animation */
+#cube_ani{
+    position: fixed;
+    left: 5%;
+    bottom: 10%;
+    z-index: -1;
+}
+.wrap {
+    margin-top: 200px;
+    perspective: 100px;
+    perspective-origin: 50% 50%;
+}
+
+.cube {
+    margin: auto;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.cube div {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    border: solid 1px #6ba3eb;
+    color: #ffffff;
+}
+
+.front {
+    transform: translateZ(100px);
+    background-color: #0f9bf8;
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+    background-color: #60dfae;
+}
+
+.right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+    background-color: #7286f7;
+}
+
+.left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+    background-color: #bbffa6;
+}
+
+.top {
+    transform: rotateX(-270deg) translateY(-100px);
+    transform-origin: top center;
+    background-color: #61e97e;
+}
+
+.bottom {
+    transform: rotateX(270deg) translateY(100px);
+    transform-origin: bottom center;
+    background-color: #53bdeb;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
